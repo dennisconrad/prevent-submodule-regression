@@ -3,7 +3,7 @@ default_stages:
   - merge-commit
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.5.0
+    rev: v3.4.0
     hooks:
     - id: trailing-whitespace
       # The ConfigParser write function writes files that violate this linter
@@ -20,7 +20,7 @@ repos:
         - --django
     # - id: requirements-txt-fixer
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.3.0
+    rev: v2.9.0
     hooks:
     - id: pyupgrade
       args:
@@ -35,17 +35,17 @@ repos:
   #   hooks:
   #   - id: isort
   - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.2.0
+    rev: v2.3.6
     hooks:
     - id: reorder-python-imports
   - repo: https://github.com/ambv/black
-    rev: stable
+    rev: 20.8b1
     hooks:
     - id: black
       language_version: python3.7
   # This flake8 ignores the configuration file and --append-config is also not honored
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.1
+    rev: 3.8.4
     hooks:
     - id: flake8
       args:
@@ -58,7 +58,7 @@ repos:
         stages:
           - prepare-commit-msg
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.1.7
+    rev: v1.1.9
     hooks:
     - id: remove-crlf
       exclude_types:

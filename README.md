@@ -2,6 +2,9 @@
 
 Pre-commit hook to prevent accidental submodule regressions
 
+**NOTE:** This is fork from https://github.com/erikogan/prevent-submodule-regression/ which sadly seems to be 
+abandoned and adds fixes which await merging in the original repository.
+
 ## Description
 
 Do you find yourself (or your collaborators) constantly rolling back submodule
@@ -23,7 +26,7 @@ A sample configuration:
 repos:
   # […]
   - repo: https://github.com/erikogan/prevent-submodule-regression
-    rev: v0.1.2
+    rev: v0.1.3
     hooks:
       - id: prevent-submodule-regression
         # By default hooks only operate on plain files, which do not include
